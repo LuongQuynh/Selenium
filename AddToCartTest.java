@@ -60,14 +60,14 @@ public class AddToCartTest {
 
 	}
 
-	@Ignore
+	@Test
 	public void SearchSheet() throws InterruptedException {
 		List<WebElement> LstItem = this.driver.findElements(By.cssSelector("li.product-item"));
 		Assert.assertEquals(LstItem.size(), 20);
 
 	}
 
-	@Ignore
+	@Test
 	public void randomProduct() {
 		List<WebElement> LstItem = this.driver.findElements(By.cssSelector("li.product-item"));
 		Random rand = new Random();
@@ -78,7 +78,7 @@ public class AddToCartTest {
 
 	}
 
-	@Ignore
+	@Test
 	public void buyProduct() throws InterruptedException {
 		List<WebElement> LstItem = this.driver.findElements(By.cssSelector("li.product-item"));
 		Random rand = new Random();
@@ -97,6 +97,7 @@ public class AddToCartTest {
 
 		System.out.println("so luong san pham thanh toan: " + product.getAttribute("value"));
 		Assert.assertEquals(1, product.getAttribute("value"));
+		Assert.assertEquals(1, Integer.parseInt(product.getAttribute("value")));
 
 	}
 
@@ -127,7 +128,7 @@ public class AddToCartTest {
 		WebElement productNext = this.driver.findElement(By.cssSelector("input.cart-product-item-cell-qty-select"));
 
 		System.out.println("so luong san pham mua tiep: " + productNext.getAttribute("value"));
-		Assert.assertEquals(2, productNext.getAttribute("value"));
+		Assert.assertEquals(2, Integer.parseInt( productNext.getAttribute("value")));
 
 	}
 
