@@ -96,7 +96,6 @@ public class AddToCartTest {
 		WebElement product = this.driver.findElement(By.cssSelector("input.cart-product-item-cell-qty-select"));
 
 		System.out.println("so luong san pham thanh toan: " + product.getAttribute("value"));
-		Assert.assertEquals(1, product.getAttribute("value"));
 		Assert.assertEquals(1, Integer.parseInt(product.getAttribute("value")));
 
 	}
