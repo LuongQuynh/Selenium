@@ -60,7 +60,7 @@ public class AddToCartTest {
 
 	}
 
-	@Ignore
+	@Test
 	public void SearchSheet() throws InterruptedException {
 		List<WebElement> LstItem = this.driver.findElements(By.cssSelector("li.product-item"));
 		Assert.assertEquals(LstItem.size(), 20);
@@ -78,7 +78,7 @@ public class AddToCartTest {
 
 	}
 
-	@Ignore
+	@Test
 	public void buyProduct() throws InterruptedException {
 		List<WebElement> LstItem = this.driver.findElements(By.cssSelector("li.product-item"));
 		Random rand = new Random();
